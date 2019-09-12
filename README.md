@@ -2,9 +2,11 @@
 Swift `CGRect` Extension that make manipulating and laying out frames a bunch easier. For people who are frustrated by AutoLayout but also tired of doing rote calculations to create simple layouts.
 
 # Purpose
-Normally, the whole point of configuring `CGRects` is so you can use them to define `UIViews`. The manipulations provided here don't directly affect any `UIViews` from which the frames may have been derived, so you'll have to re-apply them to the `UIVIews` after you've set them up how you like them. 
+Why would you want to manipulate `CGRects`? Well often the point of configuring `CGRects` is so you can use them to position `UIViews`. Many people try to do this using AutoLayout in either Interface Builder or programmatcially, and if you've found that an easy solution, blessings upon you. For anyone tired of struggling with that, here's a simple way to do a few simple things.
 
-/note:/ To keep this repository simple I've just had it cover `CGRect`. I do have an extension of `UIView` that adds all this functionality to `UIViews`, but it's not stand-alone, it's part of my [NautoLayout repository]( https://github.com/SwingsetTheory/NautoLayout.git), which also includes a slew of other helpful stuff if you want to avoid AutoLayout.
+Of course, the manipulations provided here don't directly affect any `UIViews` from which the frames may have been derived, so once you've pulled the frames out and fiddled with them, you'll have to re-apply them to the `UIVIews` manually. 
+
+/note: To keep this repository simple I've just had it cover `CGRect`. I do have an extension of `UIView` that adds all this functionality to `UIViews`, but it's not stand-alone, it's part of my [NautoLayout repository]( https://github.com/SwingsetTheory/NautoLayout.git), which also includes a slew of other helpful stuff if you want to avoid AutoLayout./
 
 # Features
 ## easy access to x and y
