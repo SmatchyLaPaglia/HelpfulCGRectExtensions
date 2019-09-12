@@ -6,7 +6,8 @@ Swift CGRect Extension that make manipulating and laying out frames a bunch easi
 `rect.x` and `rect.y` are accessible directly. What could be easier?
 
 ## make copies by only specifying the changes you want
-To copy a `CGRect` and only change the height, it's as simple as `let rectCopy = rect.copyWithNew(height: 200)`. Same can be done for x, y, and width, as well as any combination of them, as in: `let rectCopy = rect.copyWithNew(y: 15, width: 200)`
+To copy a `CGRect` and only change the height, it's as simple as 
+```let rectCopy = rect.copyWithNew(height: 200)``` Same can be done for x, y, and width, as well as any combination of them, as in: `let rectCopy = rect.copyWithNew(y: 15, width: 200)`
 
 ## instantly make copies with origins set to 0
 Like this: `let newRect = rect.copyAtZeroZero()`.
