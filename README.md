@@ -15,8 +15,9 @@ Like this: `let newRect = rect.copyAtZeroZero()`.
 A collection of functions that lets any CGRect take a set of other CGRects and set all their x and y values to lay them out in simple ways.
 
 The vertical functions, for example, will allow a CGRrect to take in a bunch of other CGRects and return them evenly spaced right down its center:
-{ hj
-}
+` let mainRect = CGRect( ...whatever dimensions desired...) 
+let setOfRects = [rectA, rectB, rectC]
+let centeredSetOfRects = mainRect.layoutVertically(rects: setOfRects)`
  - `layoutVerticallyAlongCenterX(subRects rects: [CGRect], margin: CGFloat? = nil)-> [CGRect]`
  - `public func layoutVertically(subRects rects: [CGRect], centerX: CGFloat, margin: CGFloat? = nil)->[CGRect]`
  - `public func layoutVertically(subRects rects: [CGRect], proportionalCenterX: CGFloat, margin: CGFloat? = nil)->[CGRect]`
