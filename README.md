@@ -1,5 +1,10 @@
 # HelpfulCGRectExtensions
-Swift CGRect Extension that make manipulating and laying out frames a bunch easier. For people who are frustrated by AutoLayout but also tired of doing rote calculations to create simple layouts.
+Swift `CGRect` Extension that make manipulating and laying out frames a bunch easier. For people who are frustrated by AutoLayout but also tired of doing rote calculations to create simple layouts.
+
+# Purpose
+Normally, the whole point of configuring `CGRects` is so you can use them to define `UIViews`. The manipulations provided here don't directly affect any `UIViews` from which the frames may have been derived, so you'll have to re-apply them to the `UIVIews` after you've set them up how you like them. 
+
+/note:/ To keep this repository simple I've just had it cover `CGRect`. I do have an extension of `UIView` that adds all this functionality to `UIViews`, but it's not stand-alone, it's part of my [NautoLayout repository]( https://github.com/SwingsetTheory/NautoLayout.git), which also includes a slew of other helpful stuff if you want to avoid AutoLayout.
 
 # Features
 ## easy access to x and y
@@ -33,7 +38,7 @@ A collection of functions that lets any CGRect take a set of other CGRects and s
  - `layoutHorizontally(subRects rects: [CGRect], proportionalCenterY: CGFloat, margin: CGFloat? = nil)->[CGRect]`
 
 ### more in-depth explanations
-`layoutVerticallyAlongCenterX` will allow a CGRrect to take in a bunch of other CGRects and return them evenly spaced right down its center:
+`layoutVerticallyAlongCenterX` will allow a `CGRrect` to take in a bunch of other `CGRects` and return them evenly spaced right down its center:
 ``` 
 let mainRect = CGRect( ...whatever dimensions desired...) 
 let setOfRects = [rectA, rectB, rectC]
