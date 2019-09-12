@@ -6,7 +6,7 @@ Why would you want to manipulate `CGRects`? Well often the point of configuring 
 
 Of course, the manipulations provided here don't directly affect any `UIViews` from which the frames may have been derived, so once you've pulled the frames out and fiddled with them, you'll have to re-apply them to the `UIVIews` manually. 
 
-*/note: To keep this repository simple I've just had it cover `CGRect`. I do have an extension of `UIView` that adds all this functionality to `UIViews`, but it's not stand-alone, it's part of my/* [NautoLayout repository]( https://github.com/SwingsetTheory/NautoLayout.git), */which also includes a slew of other helpful stuff if you want to avoid AutoLayout./*
+*/note: To keep this repository simple I've just had it cover `CGRect`. I do have an extension of `UIView` that adds all this functionality to `UIViews`, but it's not stand-alone, it's part of my [NautoLayout repository]( https://github.com/SwingsetTheory/NautoLayout.git), which also includes a slew of other helpful stuff if you want to avoid AutoLayout.
 
 # Features
 ## easy access to x and y
@@ -79,6 +79,6 @@ let verticalRects = mainRect.layoutVerticallyAlongCenterX(rects: setOfRects, mar
 ...
  let proportionallyHorizontalRects = layoutHorizontally(rects: setOfRects centerY: 0.75, margin: 8)
 ```
-*/note: ideally the proportional overloads would let the margin be expressed proportionally as well, but at present, they don't./*
+*/note: ideally the proportional overloads would let the margin be expressed proportionally as well, but at present, they don't.
 
 I'm sure there are others out there who prefer to do things by hand but would love a few handy shortcuts. I hope these help!
