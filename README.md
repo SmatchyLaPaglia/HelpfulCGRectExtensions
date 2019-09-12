@@ -81,5 +81,5 @@ let verticalRects = mainRect.layoutVerticallyAlongCenterX(rects: setOfRects, mar
 ```
 *note: ideally the proportional overloads would let the margin be expressed proportionally as well, but at present, they don't.*
 
-### Best of luck!
+## Best of luck!
 I'm sure there are others out there who prefer to do things by hand but would love a few handy shortcuts. I hope these help!
