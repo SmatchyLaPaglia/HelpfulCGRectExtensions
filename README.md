@@ -37,19 +37,19 @@ A collection of functions that lets any CGRect take a set of other CGRects and s
 ``` 
 let mainRect = CGRect( ...whatever dimensions desired...) 
 let setOfRects = [rectA, rectB, rectC]
-let verticalRects = mainRect.layoutVerticallyAlongCenterX(rects: setOfRects)
+let verticalSet = mainRect.layoutVerticallyAlongCenterX(rects: setOfRects)
 ```
 If you want to specify a different center X to align them along, you can just use `layoutVertically`.
 ``` 
 let mainRect = CGRect( ...whatever dimensions desired...) 
 let setOfRects = [rectA, rectB, rectC]
-let arbitrarilyVerticalRects = mainRect.layoutVertically(rects: setOfRects, centerX: 20)
+let arbitrarySet = mainRect.layoutVertically(rects: setOfRects, centerX: 20)
 ```
 And if you want to use a proportional X value instead of a literal one, you can do that with an overloaded version of `layoutVertically`. This example lays out the sub-rects vertically centered on the left side of the parent:
 ``` 
 let mainRect = CGRect( ...whatever dimensions desired...) 
 let setOfRects = [rectA, rectB, rectC]
-let proportionallyVerticalRects = mainRect.layoutVertically(rects: setOfRects, proportionalCenterX: 0.25)
+let proportionalSet = mainRect.layoutVertically(rects: setOfRects, proportionalCenterX: 0.25)
 ```
 And of course, the exact same functionality is provided for horizontal layouts.
 ```
@@ -58,10 +58,11 @@ And of course, the exact same functionality is provided for horizontal layouts.
  let horizontalRects = layoutHorizontallyAlongCenterY(rects: setOfRects)
  ...
  //centered along arbitrary horizontal position:
- let arbitrarilyHorizontalRects = layoutHorizontally(rects: setOfRects centerY: 22)
+ let arbitrarySet = layoutHorizontally(rects: setOfRects centerY: 22)
   ...
- //centered along horizontal position expressed as a proportion of the parent's height, in this case close to the left side of the parent:
- let proportionallyHorizontalRects = layoutHorizontally(rects: setOfRects centerY: 0.75)
+ //centered along horizontal position expressed as a proportion of the parent's height
+ //in this case close to the left side of the parent:
+ let proportionalSet = layoutHorizontally(rects: setOfRects centerY: 0.75)
  ```
  ### ...and they all take margins, too
 Every one of the layout commands has an optional `margin` parameter that lets you specify a padding amount that will be added to the vertical or horizontal end boundaries, whatever the case may be. Two examples:
@@ -71,4 +72,4 @@ let verticalRects = mainRect.layoutVerticallyAlongCenterX(rects: setOfRects, mar
 ...
  let proportionallyHorizontalRects = layoutHorizontally(rects: setOfRects centerY: 0.75, margin: 8)
 ```
-*/note: ideally there would also be overloads that let the margin be expressed proportionally as well, but at present, there are not./*
+**note: ideally there would also be overloads that let the margin be expressed proportionally as well, but at present, there are not.**
